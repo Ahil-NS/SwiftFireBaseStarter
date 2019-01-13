@@ -13,6 +13,7 @@
 		FA19BD1621EB53DD007DF511 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA19BD1421EB53DD007DF511 /* Main.storyboard */; };
 		FA19BD1821EB53DF007DF511 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA19BD1721EB53DF007DF511 /* Assets.xcassets */; };
 		FA19BD1B21EB53DF007DF511 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA19BD1921EB53DF007DF511 /* LaunchScreen.storyboard */; };
+		FA19BD2321EB9E15007DF511 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA19BD2221EB9E15007DF511 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		FA19BD1721EB53DF007DF511 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA19BD1A21EB53DF007DF511 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA19BD1C21EB53DF007DF511 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA19BD2221EB9E15007DF511 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FC5BE5DFCB5A8411B66AD7AA /* Pods-SwiftFirebaseStarter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftFirebaseStarter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftFirebaseStarter/Pods-SwiftFirebaseStarter.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +80,7 @@
 		FA19BD0F21EB53DD007DF511 /* SwiftFirebaseStarter */ = {
 			isa = PBXGroup;
 			children = (
+				FA19BD2221EB9E15007DF511 /* GoogleService-Info.plist */,
 				FA19BD1021EB53DD007DF511 /* AppDelegate.swift */,
 				FA19BD1221EB53DD007DF511 /* ViewController.swift */,
 				FA19BD1421EB53DD007DF511 /* Main.storyboard */,
@@ -149,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA19BD1B21EB53DF007DF511 /* LaunchScreen.storyboard in Resources */,
+				FA19BD2321EB9E15007DF511 /* GoogleService-Info.plist in Resources */,
 				FA19BD1821EB53DF007DF511 /* Assets.xcassets in Resources */,
 				FA19BD1621EB53DD007DF511 /* Main.storyboard in Resources */,
 			);
