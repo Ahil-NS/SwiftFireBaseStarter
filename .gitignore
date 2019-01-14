@@ -17,6 +17,7 @@ DerivedData
 *.ipa
 *.xcuserstate
 *.xcworkspacedata
+*.entitlements
 
 # CocoaPods
 #
@@ -26,4 +27,7 @@ DerivedData
 #
 Pods/
 GoogleService-Info.plist
+.DS_Store
+
+
 

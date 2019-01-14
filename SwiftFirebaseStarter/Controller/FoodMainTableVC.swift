@@ -13,11 +13,22 @@ class FoodMainTableVC: UITableViewController {
     
     var items: [FoodItem] = []
     let foodItemsReference = Database.database().reference(withPath: "food-items")
+    let usersReference = Database.database().reference(withPath: "online")
+    var user: User!
+    var userCountBarButtonItem: UIBarButtonItem!
+    
     
     @IBOutlet var foodTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        userCountBarButtonItem = UIBarButtonItem(title: "1",
+                                                 style: .plain,
+                                                 target: self,
+                                                 action: nil)
+        userCountBarButtonItem.tintColor = UIColor.white
+        navigationItem.leftBarButtonItem = userCountBarButtonItem
         
         
         //Get Child Values
@@ -56,6 +67,40 @@ class FoodMainTableVC: UITableViewController {
             self.items = newItems
             self.foodTableView.reloadData()
         }
+        
+        Auth.auth().addStateDidChangeListener { auth, user in
+            if let user = user{
+                self.user = User(uid: user.uid, email: user.email!)
+                let currentUserReference = self.usersReference.child(self.user.uid)
+                currentUserReference.setValue(self.user.email)
+                currentUserReference.onDisconnectRemoveValue()
+            }
+        }
+        
+        usersReference.observe(.value, with: {
+            snapshot in
+            if snapshot.exists() {
+                self.userCountBarButtonItem?.title = snapshot.childrenCount.description
+            } else {
+                self.userCountBarButtonItem?.title = "0"
+              
+            }
+        })
+        
+        
+        
+//        Auth.auth().addStateDidChangeListener {
+//            auth, user in
+//            if let user = user {
+//                self.user = User(uid: user.uid, email: user.email!)
+//                let currentUserReference = self.usersReference.child(self.user.uid)
+//                currentUserReference.setValue(self.user.email)
+//                currentUserReference.onDisconnectRemoveValue()
+//            }
+//        }
+//
+        
+        
         
     }
     
