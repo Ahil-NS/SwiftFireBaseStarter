@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		19574C31949C0F536235E2D6 /* Pods_SwiftFirebaseStarter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3C35C554B3B037338E0A792 /* Pods_SwiftFirebaseStarter.framework */; };
 		FA19BD1121EB53DD007DF511 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA19BD1021EB53DD007DF511 /* AppDelegate.swift */; };
-		FA19BD1321EB53DD007DF511 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA19BD1221EB53DD007DF511 /* ViewController.swift */; };
 		FA19BD1621EB53DD007DF511 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA19BD1421EB53DD007DF511 /* Main.storyboard */; };
 		FA19BD1821EB53DF007DF511 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA19BD1721EB53DF007DF511 /* Assets.xcassets */; };
 		FA19BD1B21EB53DF007DF511 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA19BD1921EB53DF007DF511 /* LaunchScreen.storyboard */; };
 		FA19BD2321EB9E15007DF511 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA19BD2221EB9E15007DF511 /* GoogleService-Info.plist */; };
+		FAB332B021EC559900B66BF4 /* FoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB332AF21EC559900B66BF4 /* FoodItem.swift */; };
+		FAB332B221EC6BFA00B66BF4 /* FoodMainTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB332B121EC6BFA00B66BF4 /* FoodMainTableVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,12 +22,13 @@
 		E3C35C554B3B037338E0A792 /* Pods_SwiftFirebaseStarter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftFirebaseStarter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA19BD0D21EB53DD007DF511 /* SwiftFirebaseStarter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftFirebaseStarter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA19BD1021EB53DD007DF511 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FA19BD1221EB53DD007DF511 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FA19BD1521EB53DD007DF511 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA19BD1721EB53DF007DF511 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA19BD1A21EB53DF007DF511 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA19BD1C21EB53DF007DF511 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA19BD2221EB9E15007DF511 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FAB332AF21EC559900B66BF4 /* FoodItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItem.swift; sourceTree = "<group>"; };
+		FAB332B121EC6BFA00B66BF4 /* FoodMainTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodMainTableVC.swift; sourceTree = "<group>"; };
 		FC5BE5DFCB5A8411B66AD7AA /* Pods-SwiftFirebaseStarter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftFirebaseStarter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftFirebaseStarter/Pods-SwiftFirebaseStarter.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,15 +82,32 @@
 		FA19BD0F21EB53DD007DF511 /* SwiftFirebaseStarter */ = {
 			isa = PBXGroup;
 			children = (
+				FAB332B321EC70D800B66BF4 /* Controller */,
+				FAB332AE21EC557C00B66BF4 /* Model */,
 				FA19BD2221EB9E15007DF511 /* GoogleService-Info.plist */,
 				FA19BD1021EB53DD007DF511 /* AppDelegate.swift */,
-				FA19BD1221EB53DD007DF511 /* ViewController.swift */,
 				FA19BD1421EB53DD007DF511 /* Main.storyboard */,
 				FA19BD1721EB53DF007DF511 /* Assets.xcassets */,
 				FA19BD1921EB53DF007DF511 /* LaunchScreen.storyboard */,
 				FA19BD1C21EB53DF007DF511 /* Info.plist */,
 			);
 			path = SwiftFirebaseStarter;
+			sourceTree = "<group>";
+		};
+		FAB332AE21EC557C00B66BF4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FAB332AF21EC559900B66BF4 /* FoodItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FAB332B321EC70D800B66BF4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FAB332B121EC6BFA00B66BF4 /* FoodMainTableVC.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,7 +229,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA19BD1321EB53DD007DF511 /* ViewController.swift in Sources */,
+				FAB332B021EC559900B66BF4 /* FoodItem.swift in Sources */,
+				FAB332B221EC6BFA00B66BF4 /* FoodMainTableVC.swift in Sources */,
 				FA19BD1121EB53DD007DF511 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
